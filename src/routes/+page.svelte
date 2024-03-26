@@ -1,2 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Calculadora do ENEM</h1>
+<p>Esta calculadora serve para você entender que se tivesse aprendido matemática não teria tirado essa nota veia 💩</p>
