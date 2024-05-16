@@ -2,32 +2,33 @@
 	let prova: string = 'Redação jkhkk';
 
 	let redacaoPeso: number = 1.5,
-		redacaoNota: number = 780.00;
+		redacaoNota: number = 780.0;
 
 	$: redacao = redacaoNota * redacaoPeso;
 
 	let linguagensPeso: number = 1,
-		linguagensNota: number = 552.10;
+		linguagensNota: number = 552.1;
 
 	$: linguagens = linguagensNota * linguagensPeso;
 
 	let matematicaPeso: number = 3,
-		matematicaNota: number = 637.90;
+		matematicaNota: number = 637.9;
 
 	$: matematica = matematicaNota * matematicaPeso;
 
 	let cnPeso: number = 2,
-		cnNota: number = 600.20;
+		cnNota: number = 600.2;
 
 	$: cn = cnNota * cnPeso;
 
 	let chPeso: number = 1,
-		chNota: number = 581.90;
+		chNota: number = 581.9;
 
 	$: ch = chNota * chPeso;
 
 	$: pesoSum = chPeso + cnPeso + matematicaPeso + linguagensPeso + redacaoPeso;
 
+	let mathGrade = [800, 850, 900, 950];
 	let arr = [
 		{
 			prova: 'Redação',
@@ -116,3 +117,32 @@
 		></td
 	>
 </table>
+
+<p>Caso você tivesse acertado 30 questões em matemática sua nota seria:</p>
+{(arr[0].nota * arr[0].peso +
+	arr[1].nota * arr[1].peso +
+	mathGrade[0] * arr[2].peso +
+	arr[3].nota * arr[3].peso +
+	arr[4].nota * arr[4].peso) /
+	(arr[0].peso + arr[1].peso + arr[2].peso + arr[3].peso + arr[4].peso)}
+<p>Caso você tivesse acertado 35 questões em matemática sua nota seria:</p>
+{(arr[0].nota * arr[0].peso +
+	arr[1].nota * arr[1].peso +
+	mathGrade[1] * arr[2].peso +
+	arr[3].nota * arr[3].peso +
+	arr[4].nota * arr[4].peso) /
+	(arr[0].peso + arr[1].peso + arr[2].peso + arr[3].peso + arr[4].peso)}
+<p>Caso você tivesse acertado 40 questões em matemática sua nota seria:</p>
+{(arr[0].nota * arr[0].peso +
+	arr[1].nota * arr[1].peso +
+	mathGrade[2] * arr[2].peso +
+	arr[3].nota * arr[3].peso +
+	arr[4].nota * arr[4].peso) /
+	(arr[0].peso + arr[1].peso + arr[2].peso + arr[3].peso + arr[4].peso)}
+<p>Caso você tivesse acertado 45 questões em matemática sua nota seria:</p>
+{(arr[0].nota * arr[0].peso +
+	arr[1].nota * arr[1].peso +
+	mathGrade[3] * arr[2].peso +
+	arr[3].nota * arr[3].peso +
+	arr[4].nota * arr[4].peso) /
+	(arr[0].peso + arr[1].peso + arr[2].peso + arr[3].peso + arr[4].peso)}
