@@ -61,6 +61,7 @@
 			peso: chPeso
 		}
 	];
+	
 </script>
 
 <h1>Calculadora do ENEM</h1>
