@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { grade } from './store';
-
 	let prova: string = 'Redação jkhkk';
 
 	let redacaoPeso: number = 1.5,
@@ -70,7 +68,6 @@
 	Esta calculadora serve para você entender que se tivesse aprendido matemática não teria tirado
 	essa nota paia 💩
 </p>
-
 <table>
 	<tr>
 		<th>Prova do Enem</th>
@@ -79,7 +76,7 @@
 		<th>Peso</th>
 		<th>Sua nota com peso</th>
 	</tr>
-	{#each $grade as materia}
+	{#each arr as materia}
 		<tr>
 			<td>{materia.prova}</td>
 			<td><input type="number" placeholder="0.01" bind:value={materia.minGrade} /></td>
@@ -87,7 +84,7 @@
 			<td><input type="number" placeholder="1.50" bind:value={materia.peso} /></td>
 			<td><!-- 1.170,00 -->{materia.nota * materia.peso}</td>
 		</tr>
-	{/each}""
+	{/each}
 
 	<tr>
 		<td></td>
